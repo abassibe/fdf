@@ -6,7 +6,7 @@
 #    By: abassibe <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/02/01 12:45:46 by abassibe          #+#    #+#              #
-#    Updated: 2017/05/15 13:58:34 by abassibe         ###   ########.fr        #
+#    Updated: 2017/09/30 03:01:45 by abassibe         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,8 @@ SRCS =	fdf.c \
 		render.c \
 		get_map.c \
 		key_input.c \
-		bresenham.c
+		bresenham.c \
+		img_tools.c
 
 OBJS = $(SRCS:.c=.o)
 

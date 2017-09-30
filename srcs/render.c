@@ -6,7 +6,7 @@
 /*   By: abassibe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/06 01:26:00 by abassibe          #+#    #+#             */
-/*   Updated: 2017/05/24 03:50:53 by abassibe         ###   ########.fr       */
+/*   Updated: 2017/09/30 03:04:30 by abassibe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,6 +92,7 @@ void			render(t_param *param)
 		(param->map_max_y * (param->case_size / param->tilt));
 	xi = param->xi_b;
 	yi = param->yi_b;
+	clean_img(param);
 	while (y < param->map_max_y)
 	{
 		x = 0;
@@ -102,4 +103,5 @@ void			render(t_param *param)
 		yi = param->yi_b;
 		y++;
 	}
+	mlx_put_image_to_window(param->mlx, param->win, param->vimg, 0, 0);
 }

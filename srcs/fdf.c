@@ -6,7 +6,7 @@
 /*   By: abassibe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/10 12:40:26 by abassibe          #+#    #+#             */
-/*   Updated: 2017/07/26 06:44:30 by abassibe         ###   ########.fr       */
+/*   Updated: 2017/09/30 02:42:54 by abassibe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,6 +98,8 @@ int				main(int ac, char **av)
 	param->mlx = mlx_init();
 	param->win = mlx_new_window(param->mlx, param->win_length_x,
 			param->win_length_y, param->title);
+	param->vimg = mlx_new_image(param->mlx, param->win_length_x, param->win_length_y);
+	param->img = mlx_get_data_addr(param->vimg, &param->garb, &param->sl, &param->garb);
 	render(param);
 	mlx_key_hook(param->win, &key_function, param);
 	mlx_loop(param->mlx);

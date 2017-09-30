@@ -6,7 +6,7 @@
 /*   By: abassibe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/05 01:59:39 by abassibe          #+#    #+#             */
-/*   Updated: 2017/05/24 05:08:10 by abassibe         ###   ########.fr       */
+/*   Updated: 2017/09/30 03:00:44 by abassibe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,10 @@ typedef struct		s_param
 	int				**map;
 	void			*mlx;
 	void			*win;
+	void			*vimg;
+	char			*img;
+	int				sl;
+	int				garb;
 	int				map_max_x;
 	int				map_max_y;
 	int				win_max_x;
@@ -62,5 +66,9 @@ void				algo_bresenham(t_param *param, int xf, int yf);
 t_param				*crea_lst(void);
 
 void				clear(t_param *param);
+
+void				draw_img(t_param *param);
+
+void				clean_img(t_param *param);
 
 #endif

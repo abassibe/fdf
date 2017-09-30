@@ -6,7 +6,7 @@
 /*   By: abassibe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/15 13:14:57 by abassibe          #+#    #+#             */
-/*   Updated: 2017/05/24 05:04:39 by abassibe         ###   ########.fr       */
+/*   Updated: 2017/09/30 02:59:13 by abassibe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ static void		algo_dy_sup_dx(t_param *param, int dx, int dy)
 			cumul -= dy;
 			param->x += param->xinc;
 		}
-		mlx_pixel_put(param->mlx, param->win, param->x, param->y, param->color);
+		draw_img(param);
 	}
 }
 
@@ -60,7 +60,7 @@ static void		algo_dx_sup_dy(t_param *param, int dx, int dy)
 			cumul -= dx;
 			param->y += param->yinc;
 		}
-		mlx_pixel_put(param->mlx, param->win, param->x, param->y, param->color);
+		draw_img(param);
 	}
 }
 
